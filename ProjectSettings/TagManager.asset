@@ -16,13 +16,13 @@ TagManager:
   - wall2
   - Player
   - SaveSpot
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - enviourment
+  - obstacle 1
+  - obstacle 2
+  - obstacle 3
+  - obstacle 4
+  - pushable object 1
+  - pushable object 2
   - 
   - 
   - 
