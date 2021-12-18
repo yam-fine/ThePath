@@ -15,9 +15,9 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 1, g: 1, b: 1, a: 1}
+  m_FogColor: {r: 0.066666655, g: 0.29803923, b: 0.2784314, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.009
+  m_FogDensity: 0.025
   m_LinearFogStart: 4.31
   m_LinearFogEnd: 594.83
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -27,7 +27,7 @@ RenderSettings:
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42388752, g: 0.3855109, b: 0.46226418, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 0ffaa0b7117ba8c47a9d05ae701d4b4d, type: 2}
-  m_HaloStrength: 0.595
+  m_HaloStrength: 0.647
   m_FlareStrength: 0.755
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: c08dc54556453dc46bad8cd1b17271d0, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -506,13 +506,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81624537}
-  m_LocalRotation: {x: 0.19952714, y: 0.67837226, z: -0.19952714, w: 0.67837226}
-  m_LocalPosition: {x: -8.7, y: 10.2, z: 6.7}
+  m_LocalRotation: {x: -0, y: 0.99209285, z: -0.12550636, w: 0}
+  m_LocalPosition: {x: 0.39999998, y: 1, z: 16.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 32.78, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 14.42, y: 180, z: 0}
 --- !u!1 &114423554
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,12 +557,12 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0.0509634, a: 1}
   m_Intensity: 6.12
-  m_Range: 3.39
+  m_Range: 3.6
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -4318,6 +4318,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4638347ae61d46244b885006d0a28ef6, type: 3}
       propertyPath: m_Name
       value: Charcter
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4638347ae61d46244b885006d0a28ef6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4638347ae61d46244b885006d0a28ef6, type: 3}
