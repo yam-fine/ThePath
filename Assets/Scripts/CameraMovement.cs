@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,44 +7,48 @@ public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private Transform target;
     [SerializeField] private float boundX = 0.15f;
-    [SerializeField] private float boundY = 0.05f;
+    [SerializeField] private float boundZDown = 0.05f;
+    [SerializeField] private float boundZUp = 0.05f;
+    [SerializeField] private float speed = 2f;
+    private Vector3 here;
+    private bool follow = false;
+    private float zOffset = 3f;
+    private Vector3 distFromTarget;
+
+    private void Start()
+    {
+        distFromTarget = transform.position - target.position;
+    }
 
     // Update is called once per frame
     void LateUpdate()
     {
         var currPos = transform.position;
-
-        // transform.position = new Vector3(lookAt.transform.position.x, currPos.y, currPos.z);
-        //
-        // return;
-        
-        Vector3 delta = Vector3.zero;
+        var pos = transform.position;
         float deltaX = target.position.x - currPos.x;
+        float deltaZ = target.position.z - currPos.z - zOffset;
+        if (follow)
+        {
+            pos = Vector3.MoveTowards(transform.position, here, Time.deltaTime * speed);
+        }
+        Debug.Log(deltaX +","+deltaZ);
         if (deltaX > boundX || deltaX < -boundX)
         {
-            if (currPos.x < target.position.x)
-            {
-                delta.x = deltaX - boundX;
-            }
-            else
-            {
-                delta.x = deltaX + boundX;
-            }
+            here = target.position + distFromTarget;
+            follow = true;
         }
-
-        float deltaY = target.position.y - currPos.y;
-        if (deltaY > boundY || deltaY < -boundY)
+        else if (deltaZ > boundZUp || deltaZ < -boundZDown)
         {
-            if (currPos.y < target.position.y)
-            {
-                delta.y = deltaY - boundY;
-            }
-            else
-            {
-                delta.y = deltaY + boundY;
-            }
+            here = target.position + distFromTarget;
+            follow = true;
         }
+        else
+        {
+            follow = false;
+        }
+        
 
-        transform.position += new Vector3(delta.x, delta.y, 0);
+        transform.position = pos;
+        
     }
 }
