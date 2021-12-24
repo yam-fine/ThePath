@@ -258,25 +258,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 39.29, y: 0, z: 0}
-<<<<<<< Updated upstream
---- !u!114 &32523001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32522998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8f59ee9bf8987041ac063b5ff2b78e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1960076111}
-  boundX: 2
-  boundZDown: 0.5
-  boundZUp: 2
-  speed: 2
-=======
 --- !u!1 &134650400 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8173624390789792933, guid: 4e6f50c3bee17664fadc54c0745b9b0b, type: 3}
@@ -446,7 +427,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1 &697039138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6297441221697563892, guid: 2280ed15da9f2a34590c8f637a6f52bf, type: 3}
