@@ -13,6 +13,7 @@ public class PushObject : MonoBehaviour {
             Vector3 forceDir = hit.gameObject.transform.position - transform.position;
             forceDir.y = 0;
             forceDir.Normalize();
+            rb.AddForce(transform.forward * forceScale, ForceMode.Impulse);
         }
     }
 }
