@@ -12,7 +12,8 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private float speed = 2f;
     private Vector3 here;
     private bool follow = false;
-    private float zOffset = 3f;
+    [SerializeField] private float zOffset = 3f;
+    [SerializeField] private float xOffset = 3f;
     private Vector3 distFromTarget;
 
     private void Start()
@@ -25,13 +26,12 @@ public class CameraMovement : MonoBehaviour
     {
         var currPos = transform.position;
         var pos = transform.position;
-        float deltaX = target.position.x - currPos.x;
+        float deltaX = target.position.x - currPos.x - xOffset;
         float deltaZ = target.position.z - currPos.z - zOffset;
         if (follow)
         {
             pos = Vector3.MoveTowards(transform.position, here, Time.deltaTime * speed);
         }
-        Debug.Log(deltaX +","+deltaZ);
         if (deltaX > boundX || deltaX < -boundX)
         {
             here = target.position + distFromTarget;
