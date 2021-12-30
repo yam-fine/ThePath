@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] Transform firstSaveSpot;
-    [SerializeField] int mapHeight = -10;
+    [SerializeField] LayerMask groundLayers;
 
     Transform currSaveSpot;
     Player player;
     CharacterController cc;
+    bool grounded;
+    [SerializeField] float groundedRadius = .28f, groundedOffset = -.14f;
 
     public Transform CurrentSaveSpot { get { return currSaveSpot; } set { currSaveSpot = value; } }
    
@@ -31,7 +33,15 @@ public class GameManager : MonoBehaviour
     }
 
     private void Update() {
-        if (player.transform.position.y < mapHeight) {
+        //GroundedCheck();
+    }
+
+    private void GroundedCheck() {
+        Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - groundedOffset, transform.position.z);
+        grounded = Physics.CheckSphere(spherePosition, groundedRadius, groundLayers, QueryTriggerInteraction.Ignore);
+
+        if (!grounded) {
+            Debug.Log("oopsie i died");
             cc.enabled = false;
             player.transform.position = currSaveSpot.transform.position;
             cc.enabled = true;
