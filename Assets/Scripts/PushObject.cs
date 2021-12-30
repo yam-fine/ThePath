@@ -10,9 +10,6 @@ public class PushObject : MonoBehaviour {
         Rigidbody rb = hit.collider.attachedRigidbody;
 
         if (rb != null) {
-            Vector3 forceDir = hit.gameObject.transform.position - transform.position;
-            forceDir.y = 0;
-            forceDir.Normalize();
             rb.AddForce(transform.forward * forceScale, ForceMode.Impulse);
         }
     }

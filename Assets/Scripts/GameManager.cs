@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,5 +36,9 @@ public class GameManager : MonoBehaviour
             player.transform.position = currSaveSpot.transform.position;
             cc.enabled = true;
         }
+    }
+
+    public void ResetLevel() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
