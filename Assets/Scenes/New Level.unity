@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -241,12 +241,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1777010866, guid: 2280ed15da9f2a34590c8f637a6f52bf, type: 3}
+      propertyPath: groundedOffset
+      value: 0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777010866, guid: 2280ed15da9f2a34590c8f637a6f52bf, type: 3}
       propertyPath: groundedRadius
-      value: 2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1777010866, guid: 2280ed15da9f2a34590c8f637a6f52bf, type: 3}
       propertyPath: groundLayers.m_Bits
-      value: 1024
+      value: 131072
       objectReference: {fileID: 0}
     - target: {fileID: 1777010867, guid: 2280ed15da9f2a34590c8f637a6f52bf, type: 3}
       propertyPath: cursorLocked
@@ -278,7 +282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5211868335621758147, guid: 2280ed15da9f2a34590c8f637a6f52bf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.66
+      value: -32.54
       objectReference: {fileID: 0}
     - target: {fileID: 5211868335621758147, guid: 2280ed15da9f2a34590c8f637a6f52bf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -994,11 +998,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4367660743376809057, guid: d0186e9646826f64abad097627c98087, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.12174877
+      value: 0.22010927
       objectReference: {fileID: 0}
     - target: {fileID: 4367660743376809057, guid: d0186e9646826f64abad097627c98087, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.27434623
+      value: 0.32541576
       objectReference: {fileID: 0}
     - target: {fileID: 4367660743376809057, guid: d0186e9646826f64abad097627c98087, type: 3}
       propertyPath: m_LocalScale.z
@@ -1010,11 +1014,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4367660743376809057, guid: d0186e9646826f64abad097627c98087, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.068
+      value: -0.067
       objectReference: {fileID: 0}
     - target: {fileID: 4367660743376809057, guid: d0186e9646826f64abad097627c98087, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.281
+      value: -7.493
       objectReference: {fileID: 0}
     - target: {fileID: 4367660743376809057, guid: d0186e9646826f64abad097627c98087, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3520,11 +3524,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstSaveSpot: {fileID: 1590866833}
-  groundLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  groundedRadius: 0.28
-  groundedOffset: -0.14
 --- !u!4 &1180879462
 Transform:
   m_ObjectHideFlags: 0
@@ -4044,7 +4043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 958746511546063705, guid: 4e6f50c3bee17664fadc54c0745b9b0b, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 130039
+      value: 261111
       objectReference: {fileID: 0}
     - target: {fileID: 958746511546063707, guid: 4e6f50c3bee17664fadc54c0745b9b0b, type: 3}
       propertyPath: m_Name
@@ -4916,6 +4915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1590866833}
+  - component: {fileID: 1590866834}
   m_Layer: 0
   m_Name: SS1
   m_TagString: Untagged
@@ -4937,6 +4937,18 @@ Transform:
   m_Father: {fileID: 145567826}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1590866834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590866832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817625ef56ad4c40bba8214ebb5b703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1598323621
 GameObject:
   m_ObjectHideFlags: 0
@@ -5256,7 +5268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 958746511546063705, guid: 4e6f50c3bee17664fadc54c0745b9b0b, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 124919
+      value: 255991
       objectReference: {fileID: 0}
     - target: {fileID: 958746511546063707, guid: 4e6f50c3bee17664fadc54c0745b9b0b, type: 3}
       propertyPath: m_Name
@@ -5499,7 +5511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 958746511546063705, guid: 4e6f50c3bee17664fadc54c0745b9b0b, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 130039
+      value: 261111
       objectReference: {fileID: 0}
     - target: {fileID: 958746511546063707, guid: 4e6f50c3bee17664fadc54c0745b9b0b, type: 3}
       propertyPath: m_Name
@@ -6284,7 +6296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 958746511546063705, guid: 4e6f50c3bee17664fadc54c0745b9b0b, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 129015
+      value: 260087
       objectReference: {fileID: 0}
     - target: {fileID: 958746511546063707, guid: 4e6f50c3bee17664fadc54c0745b9b0b, type: 3}
       propertyPath: m_Name
@@ -6650,7 +6662,8 @@ GameObject:
   - component: {fileID: 1873991513}
   - component: {fileID: 1873991512}
   - component: {fileID: 1873991511}
-  m_Layer: 16
+  - component: {fileID: 1873991514}
+  m_Layer: 17
   m_Name: floor
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -6680,7 +6693,7 @@ BoxCollider:
   m_GameObject: {fileID: 1873991509}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.0000001, y: 2.0000002, z: 1.0000002}
   m_Center: {x: 0.000000033527613, y: -0.0000019073486, z: -0.000000074505806}
@@ -6733,6 +6746,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873991509}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &1873991514
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873991509}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1889896024
 GameObject:
@@ -6866,7 +6893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 958746511546063705, guid: 4e6f50c3bee17664fadc54c0745b9b0b, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 130039
+      value: 261111
       objectReference: {fileID: 0}
     - target: {fileID: 958746511546063707, guid: 4e6f50c3bee17664fadc54c0745b9b0b, type: 3}
       propertyPath: m_Name
