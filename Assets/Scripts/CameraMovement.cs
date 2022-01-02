@@ -33,7 +33,7 @@ public class CameraMovement : MonoBehaviour
         {
             pos = Vector3.MoveTowards(transform.position, here, Time.deltaTime * speed);
         }
-        
+        Debug.Log(deltaX +", " + deltaZ);
         if (deltaX > boundXUp || deltaX < -boundXDown)
         {
             here = target.position + distFromTarget;
