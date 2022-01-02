@@ -9,15 +9,15 @@ public class MovingObstacle : MonoBehaviour
 
     int currTarget = 0;
     float epsilon = .1f;
-    Vector3 epsilonVec;
-
-    private void Start() {
-        epsilonVec = new Vector3(epsilon, epsilon, epsilon);
-    }
 
     void Update()
     {
-        //if (transform.position + epsilonVec >= goTo[currTarget].position)
-        //transform.position = Mathf.Lerp(transform.position, goTo[currTarget].position, Time.deltaTime * speed);
+        transform.position = Vector3.Lerp(transform.position, goTo[currTarget].position, Time.deltaTime * speed);
+
+        if (Vector3.Distance(transform.position, goTo[currTarget].position) <= epsilon) {
+            currTarget++;
+            if (currTarget == goTo.Count)
+                currTarget = 0;
+        }
     }
 }

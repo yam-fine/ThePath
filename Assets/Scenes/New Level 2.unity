@@ -4696,6 +4696,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 586592184}
     m_Modifications:
+    - target: {fileID: 4716552057746372412, guid: 9ae26c8cb38bf634fbf44ce69ef9ed7c, type: 3}
+      propertyPath: defaultCanvas
+      value: 
+      objectReference: {fileID: 1876534281}
+    - target: {fileID: 4716552057746372412, guid: 9ae26c8cb38bf634fbf44ce69ef9ed7c, type: 3}
+      propertyPath: onTriggerCanvas
+      value: 
+      objectReference: {fileID: 388398113}
     - target: {fileID: 6583154328355114511, guid: 9ae26c8cb38bf634fbf44ce69ef9ed7c, type: 3}
       propertyPath: m_RootOrder
       value: 15

@@ -9,6 +9,7 @@ public class PressurePlate : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         defaultCanvas.enabled = false;
         onTriggerCanvas.enabled = true;
+        //AUDIO
     }
 
     private void OnTriggerExit(Collider other) {
