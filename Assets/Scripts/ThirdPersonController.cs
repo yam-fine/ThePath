@@ -221,7 +221,10 @@ namespace StarterAssets
 			// update animator if using character
 			if (_hasAnimator)
 			{
-				//_animator.SetFloat(_animIDSpeed, _animationBlend);
+				if (_input.move != Vector2.zero)
+					_animator.SetBool("Run", true);
+				else
+					_animator.SetBool("Run", false);
 				//_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
 			}
 		}
