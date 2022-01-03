@@ -5053,6 +5053,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pushable
       objectReference: {fileID: 0}
+    - target: {fileID: 8777306533543138465, guid: 8350b65b59de2ff43b0ffc21e4fc05c7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 756345259858de7499153acf883d986a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8350b65b59de2ff43b0ffc21e4fc05c7, type: 3}
 --- !u!4 &4501000618973124990 stripped
@@ -5151,6 +5155,7 @@ MonoBehaviour:
   goTo:
   - {fileID: 590720478}
   - {fileID: 905373082}
+  speed: 3.5
 --- !u!1001 &8991299349860093888
 PrefabInstance:
   m_ObjectHideFlags: 0
