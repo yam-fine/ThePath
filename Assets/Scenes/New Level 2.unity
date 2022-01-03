@@ -2039,7 +2039,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5221384555155470746, guid: 79ab73c3bb8a16343bfdd63022cb1e7c, type: 3}
   m_PrefabInstance: {fileID: 977076813}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
 --- !u!1001 &1074622238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2114,8 +2113,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3944006360335052614, guid: b39a501f365fee849ae43c7cec3ace90, type: 3}
   m_PrefabInstance: {fileID: 1074622238}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> Stashed changes
 --- !u!1 &1087087370
 GameObject:
   m_ObjectHideFlags: 0
