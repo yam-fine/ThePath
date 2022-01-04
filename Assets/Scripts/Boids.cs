@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoidCohesion))]
 public class Boids : MonoBehaviour
 {
     [SerializeField] float maxVelocity;

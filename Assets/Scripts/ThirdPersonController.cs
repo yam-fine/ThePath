@@ -143,7 +143,7 @@ namespace StarterAssets
 			// update animator if using character
 			if (_hasAnimator)
 			{
-				_animator.SetBool(_animIDGrounded, Grounded);
+				//_animator.SetBool(_animIDGrounded, Grounded);
 			}
 		}
 
@@ -167,6 +167,7 @@ namespace StarterAssets
 		private void Move()
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed
+			float targetSpeed = MoveSpeed;
 
 			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
@@ -215,11 +216,14 @@ namespace StarterAssets
 
 			// move the player
 			_controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
-
 			// update animator if using character
 			if (_hasAnimator)
 			{
-				_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
+				if (_input.move != Vector2.zero)
+					_animator.SetBool("Run", true);
+				else
+					_animator.SetBool("Run", false);
+				//_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
 			}
 		}
 
@@ -233,8 +237,8 @@ namespace StarterAssets
 				// update animator if using character
 				if (_hasAnimator)
 				{
-					_animator.SetBool(_animIDJump, false);
-					_animator.SetBool(_animIDFreeFall, false);
+					//_animator.SetBool(_animIDJump, false);
+					//_animator.SetBool(_animIDFreeFall, false);
 				}
 
 				// stop our velocity dropping infinitely when grounded
@@ -252,7 +256,7 @@ namespace StarterAssets
 					// update animator if using character
 					if (_hasAnimator)
 					{
-						_animator.SetBool(_animIDJump, true);
+						//_animator.SetBool(_animIDJump, true);
 					}
 				}
 
@@ -277,7 +281,7 @@ namespace StarterAssets
 					// update animator if using character
 					if (_hasAnimator)
 					{
-						_animator.SetBool(_animIDFreeFall, true);
+						//_animator.SetBool(_animIDFreeFall, true);
 					}
 				}
 

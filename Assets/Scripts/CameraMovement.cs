@@ -6,7 +6,8 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private Transform target;
-    [SerializeField] private float boundX = 0.15f;
+    [SerializeField] private float boundXDown = 0.15f;
+    [SerializeField] private float boundXUp = 0.15f;
     [SerializeField] private float boundZDown = 0.05f;
     [SerializeField] private float boundZUp = 0.05f;
     [SerializeField] private float speed = 2f;
@@ -32,12 +33,13 @@ public class CameraMovement : MonoBehaviour
         {
             pos = Vector3.MoveTowards(transform.position, here, Time.deltaTime * speed);
         }
-        if (deltaX > boundX || deltaX < -boundX)
+        Debug.Log(deltaX +", " + deltaZ);
+        if (deltaX > boundXUp || deltaX < -boundXDown)
         {
             here = target.position + distFromTarget;
             follow = true;
         }
-        else if (deltaZ > boundZUp || deltaZ < -boundZDown)
+        else if (deltaZ > boundZUp|| deltaZ < -boundZDown)
         {
             here = target.position + distFromTarget;
             follow = true;
