@@ -11,8 +11,11 @@ public class Player : MonoBehaviour
     static Player instance;
     [SerializeField] LayerMask groundLayers;
     [SerializeField] float groundedRadius = .28f, groundedOffset = -.14f;
+    [SerializeField] Scarf sc;
+
     private void Start() {
         cc = GetComponent<CharacterController>();
+        sc.enabled = true;
     }
     private void LateUpdate()
     {

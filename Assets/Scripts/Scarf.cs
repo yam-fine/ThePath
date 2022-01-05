@@ -12,6 +12,7 @@ public class Scarf : MonoBehaviour {
     private float length = 0.0f;
     private float max_length = 0.0f;
     LineRenderer lineRenderer;
+
     // Start is called before the first frame update
     void Start() {
         previousGlobalPosition = gameObject.transform.position;
